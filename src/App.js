@@ -10,6 +10,7 @@ function App() {
       <Header />
       <Navbar />
       <Content />
+      {/* mir */}
     </div>
   );
 }
