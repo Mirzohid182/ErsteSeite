@@ -1,0 +1,17 @@
+.nav {
+  padding-left: 9%;
+  grid-area: nav;
+  background-color: rgb(76, 235, 84);
+}
+
+.item a{
+  color: rgb(248, 7, 7);
+}
+
+.Settings{
+  padding-top: 5px;
+}
+.Settings.active a{
+  padding-top: 105px;
+  color: gold;
+}
