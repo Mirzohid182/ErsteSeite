@@ -1,4 +1,23 @@
-.dialogs{
-    font-size: 22px;
-    color:darkblue;
+.dialogs {
+  font-size: 22px;
+  color: darkblue;
+  display: grid;
+  grid-template-areas: "dialog message";
+  grid-template-columns: 2fr 10fr;
+}
+
+.dialog {
+  padding-left: 15px;
+  grid-area: dialog;
+}
+
+.dialogItem {
+}
+
+.ActivDialogItem {
+  color: gold;
+}
+
+.Messages {
+  grid-area: message;
 }
