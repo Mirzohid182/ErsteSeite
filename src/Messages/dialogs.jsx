@@ -5,21 +5,45 @@ import DialogItem from "./dialogsItem";
 import MessagesItem from "./MessageItem";
 
 const Messages = (props) => {
+  let DialogItem1 = [
+    { id: "1", name: "Ali" },
+    { id: "2", name: "Asis" },
+    { id: "3", name: "Mirzokhid" },
+    { id: "4", name: "Axror" },
+    { id: "5", name: "Abror" },
+    { id: "6", name: "Aktam" },
+  ];
+
+  let MessagesItem1 = [
+    { name: "Wie geht`s Ihnen?" },
+    { name: "Was machst du?" },
+    { name: "sehr gut" },
+  ];
+
+  let DialogElement = DialogItem1.map((d) => (
+    <DialogItem key={d.id} name={d.name} />
+  ));
+
+  let MessagesElement = MessagesItem1.map((p) => (
+    <MessagesItem message={p.name} />
+  ));
+
+  let AddPerson = React.createRef();
+
+  let buttonElement = () => {
+    let Person = AddPerson.current.value;
+    alert(Person);
+  };
+
   return (
     <div className={s.dialogs}>
       <div className={s.dialog}>
-        <DialogItem id="1" name="Ali" />
-        <DialogItem id="2" name="Asis" />
-        <DialogItem id="3" name="Mirzokhid" />
-        <DialogItem id="4" name="Axror" />
-        <DialogItem id="5" name="Abror" />
+        {DialogElement}
+        <textarea ref={AddPerson}></textarea>
+        <button onClick={buttonElement}>Add Person</button>
       </div>
 
-      <div className={s.Messages}>
-        <MessagesItem name="Wie geht`s Ihnen?" />
-        <MessagesItem name="Was machst du?" />
-        <MessagesItem name="sehr gut" />
-      </div>
+      <div className={s.Messages}>{MessagesElement}</div>
     </div>
   );
 };

@@ -16,11 +16,6 @@ function App() {
         <Header />
         <Navbar />
         <div className="content">
-          {/* <Content />
-          <News />
-          <Musik />
-          <Settings />
-          <Messages /> */}
           <Switch>
           <Route path="/Content"   component={Content} />
           <Route path="/Messages" component={Messages} />

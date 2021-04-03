@@ -8,7 +8,7 @@ const Post = (props) => {
       <img src='https://sweetpanda.ru/wp-content/uploads/2016/10/panda-theme-fa16.jpg'/>
       <div>
           <span>
-              {props.message} {props.news}
+              {props.name}
           </span>
       </div>
   </div>
